@@ -6,11 +6,13 @@
         {
             //2 személy szobánként max
             int[] szallodaszobak = new int[12];
-            bekeres = 
+            Console.WriteLine("Kérem adja meg hány meber szeretné kifoglalni a szobát");
+            int bekeres = Convert.ToInt32(Console.ReadLine());
+
         }
         static void Main(string[] args)
         {
-            
+            szallodafeladat(); 
         }
     }
 }
