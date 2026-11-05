@@ -91,6 +91,10 @@ namespace szallodafoglalo
                             bejelentkezett = true;
                             Console.WriteLine("Sikeres bejelentkezés!");
                         }
+                        else
+                        {
+                            Console.WriteLine("Sikertelen bejelentkezés");
+                        }
 
 
                         break;
