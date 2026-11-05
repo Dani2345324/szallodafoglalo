@@ -15,7 +15,7 @@ namespace szallodafoglalo
                 Console.Write("Kérem adja meg hány ember szeretné kifoglalni a szállodát: ");
                 int bekeres = Convert.ToInt32(Console.ReadLine());
                 int sorszam = 0;
-                while (sorszam < 11)
+                while (sorszam < 12)
                 {
                     if (bekeres > 1)
                     {
@@ -48,7 +48,7 @@ namespace szallodafoglalo
             }
             string regisztralt_nev = "";
             string regisztralt_jelszo = "";
-
+            
             bool bejelentkezett = false;
 
             
@@ -57,7 +57,7 @@ namespace szallodafoglalo
             {
                 Console.WriteLine("1 : regisztráció a szálloda weboldalára: ");
                 Console.WriteLine("2 : bejelentkezés a szálloda weboldalára: ");
-                Console.WriteLine("3 : szobak lefoglalasa szemelyek szamara");
+                Console.WriteLine("3 : szobák lefoglalasa szemelyek szamara");
                 Console.WriteLine("4 : kilépés");
                 int bekert_menupont = Convert.ToInt32(Console.ReadLine());
 
@@ -86,12 +86,24 @@ namespace szallodafoglalo
                         Console.Write("kérem adja meg a jelszót amivel regisztált: ");
                         string bekertadat2 = Console.ReadLine();
 
+                        if (bekertadat == regisztralt_nev && bekertadat2 == regisztralt_jelszo)
+                        {
+                            bejelentkezett = true;
+                            Console.WriteLine("Sikeres bejelentkezés!");
+                        }
+
+
                         break;
+
 
                     case 3:
                         if (regisztralt_nev != "" && regisztralt_jelszo != "" && bejelentkezett)
                         {
                             fobekeres();
+                        }
+                        else
+                        {
+                            Console.WriteLine("hiba! nem jelentkeztél be vagy még nem regisztáltál!");
                         }
 
                         break;
