@@ -15,6 +15,7 @@ namespace szallodafoglalo
                 Console.Write("Kérem adja meg hány ember szeretné kifoglalni a szállodát: ");
                 int bekeres = Convert.ToInt32(Console.ReadLine());
                 int sorszam = 0;
+                
                 while (sorszam < 12)
                 {
                     if (bekeres > 1)
@@ -50,7 +51,7 @@ namespace szallodafoglalo
             string regisztralt_jelszo = "";
             
             bool bejelentkezett = false;
-
+            Console.WriteLine("Szállodafoglaló program");
             
             bool kilepes_notrue = true;
             while (kilepes_notrue)
@@ -107,7 +108,7 @@ namespace szallodafoglalo
                         }
                         else
                         {
-                            Console.WriteLine("hiba! nem jelentkeztél be vagy még nem regisztáltál!");
+                            Console.WriteLine("hiba! nem jelentkeztél be vagy még nem regisztáltál vagy nem adtál meg semmit!");
                         }
 
                         break;
